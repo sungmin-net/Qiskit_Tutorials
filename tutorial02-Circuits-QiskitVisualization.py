@@ -24,7 +24,7 @@ counts  = result.get_counts(circ)
 print(counts)
 
 plot_histogram(counts)
-#plt.show() # added
+plt.show() # added
 
 # Execute 2-qubit Bell state again
 second_result = execute(circ, backend, shots = 1000).result()
@@ -33,11 +33,11 @@ second_counts = second_result.get_counts(circ)
 # Plot results with Legend
 legend = ['First execution', 'Second execution']
 plot_histogram([counts, second_counts], legend = legend)
-#plt.show() # added
+plt.show() # added
 
 plot_histogram([counts, second_counts], legend=legend, sort='desc', figsize=(15,12),
         color=['orange', 'black'], bar_labels=False)
-#plt.show() #added
+plt.show() #added
 
 # Plot State
 from qiskit.visualization import plot_state_city, plot_bloch_multivector
@@ -50,38 +50,38 @@ result = execute(bell, backend).result()
 psi  = result.get_statevector(bell)
 
 plot_state_city(psi)
-#plt.show() # added
+plt.show() # added
 
 plot_state_hinton(psi)
-#plt.show() # added
+plt.show() # added
 
 plot_state_qsphere(psi)
-#plt.show() # added
+plt.show() # added
 
 plot_state_paulivec(psi)
-#plt.show()
+plt.show()
 
 plot_bloch_multivector(psi)
-#plt.show()
+plt.show()
 
 # Options when using state plotting functions
 
 plot_state_city(psi, title="My City", color=['black', 'orange'])
-#plt.show()
+plt.show()
 
 plot_state_hinton(psi, title="My Hinton")
-#plt.show()
+plt.show()
 
 plot_state_paulivec(psi, title="My Paulivec", color=['purple', 'orange', 'green'])
-#plt.show()
+plt.show()
 
 plot_bloch_multivector(psi, title="My Bloch Spheres")
-#plt.show()
+plt.show()
 
 # Plot Bloch Vector
 from qiskit.visualization import plot_bloch_vector
 plot_bloch_vector([0,1,0])
-#plt.show() # added
+plt.show() # added
 
 # Options for plot_bloch_vector()
 plot_bloch_vector([0,1,0], title='My Bloch Sphere')
@@ -89,7 +89,7 @@ plt.show() # added
 
 '''
 This code is a part of Qiskit
-© Copyright IBM 2017, 2021.
+ⓒ Copyright IBM 2017, 2021.
 
 This code is licensed under the Apache License, Version 2.0. You may
 obtain a copy of this license in the LICENSE.txt file in the root directory
